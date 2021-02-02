@@ -11,7 +11,7 @@
       />
       {{ todo.title }}
     </p>
-    <button class="del">x</button>
+    <button @click="$emit('del-todo', todo.id)" class="del">x</button>
   </div>
 </template>
 
