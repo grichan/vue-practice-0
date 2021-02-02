@@ -4,9 +4,14 @@
     v-bind:class="{ 'is-complete': mutableTodo.completed }"
   >
     <p>
-      <input type="checkbox" v-on:change="markComplete()" />
+      <input
+        type="checkbox"
+        v-on:change="markComplete()"
+        :checked="mutableTodo.completed"
+      />
       {{ todo.title }}
     </p>
+    <button class="del">x</button>
   </div>
 </template>
 
@@ -32,9 +37,16 @@ export default {
   background: #f3f3f3;
   padding: 1em;
   border-bottom: 1px #ccc dotted;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .is-complete {
   text-decoration: line-through;
+}
+
+.del {
+  background-color: rgba(255, 75, 75, 0.849);
 }
 </style>
