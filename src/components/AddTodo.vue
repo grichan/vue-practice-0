@@ -2,7 +2,7 @@
   <div>
     <form @submit="addTodo">
       <input type="text" v-model="title" name="title" placeholder="Add todo" />
-      <input type="submit" value="Submit" />
+      <button type="submit" value="Submit">Submit</button>
     </form>
   </div>
 </template>
@@ -33,4 +33,20 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+div {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+form input,
+form button {
+  padding: 0.3rem;
+  border: 1px solid #333;
+}
+form button {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+}
+</style>
