@@ -22,7 +22,6 @@ export default {
       e.preventDefault();
       console.log('"add todo" :>> ', "add todo");
       const newTodo = {
-        id: 4,
         title: this.title,
         completed: false
       };
